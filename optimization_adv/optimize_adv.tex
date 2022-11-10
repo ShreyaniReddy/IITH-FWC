@@ -1,0 +1,67 @@
+\documentclass[journal,10pt,twocolumn]{article}
+\usepackage{graphicx}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[cmex10]{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{mathtools}
+\title{\textbf{Optimization Assignment - 2}}
+\author{Ginna Shreyani}
+\date{November 2022}
+
+
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\let\vec\mathbf
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+
+\begin{document}
+
+\maketitle
+\section{Problem Statement}
+Show that if ABC is a triangle, and P any point then $\vec{(PA)}^2+\vec{(PB)}^2+\vec{(PC)}^2$ will be minimum when $\vec{P}$ is at the centroid.\\
+\section{Solution:} 
+Given, ABC is a triangle and $\vec{P}$ be any point, then 
+\begin{align}
+	&\vec{(P-A)}^2+\vec{(P-B)}^2+\vec{(P-C)}^2
+\label{eq-1}
+\end{align}
+should be minimum when P is centroid.\\
+For ($\ref{eq-1}$) to be minimum the differentiation of ($\ref{eq-1}$) should be equated to zero.\\
+\begin{align}
+	&\frac{d}{d(x,y)}[\vec{(P-A)}^2+\vec{(P-B)}^2+\vec{(P-C)}^2]=0
+\label{eq-2}
+\end{align}
+By solving the ($\ref{eq-2}$), we get
+\begin{multline}
+	2\vec{(P-A)}\frac{d}{d(P)}[(P-A)]+2\vec{(P-B)}\frac{d}{d(P)}[(P-B)]+2\vec{(P-C)}\frac{d}{d(P)}[(P-C)] = 0\\
+\end{multline}
+\begin{align*}
+	&2(\vec{(P-A)}+\vec{(P-B)}+\vec{(P-C)})=0\\
+	&\vec{P} = \frac{\vec{A}+\vec{B}+\vec{C}}{3}
+\end{align*}
+Therefore, minimum of ($\ref{eq-1}$) is obtained when P is the centroid of the triangle ABC.\\
+Using cvxpy method,\\
+Let us take the vertices of the triangle,\\
+\begin{align*}
+	&\vec{A}=\myvec{0\\0}\\
+	&\vec{B}=\myvec{4\\0}\\
+	&\vec{C}=\myvec{3\\4}\\
+\end{align*}
+The minimum value is given as,\\
+\begin{align*}
+	&\min_{\vec{P}}(\vec{(P-A)^2}+\vec{(P-B)^2}+\vec{(P-C)^2})
+\end{align*}
+The minimum is obtained by equating the above equation to 0.\\
+\begin{align*}
+	&6\vec{P} = 2\vec{(A+B+C)}\\
+	&\vec{P} =\frac{1}{3}\vec{(A+B+C)}\\
+	&\vec{P} = \frac{1}{3}(\myvec{0\\0}+\myvec{4\\0}+\myvec{3\\4})\\
+	&\vec{P} =\myvec{\frac{7}{3}\\\frac{4}{3}}
+\end{align*}
+\end{document}
