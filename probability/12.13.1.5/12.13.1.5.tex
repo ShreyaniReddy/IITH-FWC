@@ -1,0 +1,62 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsmath}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{gensymb}
+\usepackage{mathtools}
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
+\title{
+Probability Assignment
+}
+\author{GINNA SHREYANI}
+\date{}
+\begin{document}
+\maketitle
+
+
+\textbf{12.13.1.5}\\
+If P(A)=$\frac{6}{11}$, $P(B)=\frac{5}{11}$ and P(A+B)=$\frac{7}{11}$, find\\
+(i) P(A.B)   (ii)P($A \mid B$)  (iii)P($B\mid A$)
+\subsection*{Solution}
+\textbf{(i)} We know that,\\
+\begin{equation}
+	P(A.B) = P(A) + P(B) -P(A+B)
+	\label{eq-1}
+\end{equation}
+From ($\ref{eq-1}$), we get\\
+\begin{align*}
+	&P(A.B) = \frac{6}{11} + \frac{5}{11} - \frac{7}{11}\\
+	&P(A.B) = \frac{4}{11}
+\end{align*}
+\textbf{(ii)}, We know that,\\
+\begin{equation}
+	P(A\mid B) = \frac{P(A.B)}{P(B)}
+	\label{eq-2}
+\end{equation}
+From ($\ref{eq-2}$), we get\\
+\begin{align*}
+	&P(A \mid B) = \frac{\frac{4}{11}}{\frac{5}{11}}\\
+	&P(A\mid B) = \frac{4}{5}
+\end{align*}
+\textbf{(iii)}, We know that,\\
+\begin{equation}
+	P(B\mid A)=\frac{P(B.A)}{P(A)}
+	\label{eq-3}
+\end{equation}
+From ($\ref{eq-3}$), we get\\
+\begin{align*}
+	&P(B\mid A) = \frac{\frac{4}{11}}{\frac{6}{11}}\\
+	&P(B\mid A) = \frac{4}{6}\\
+	&P(B\mid A) = \frac{2}{3}
+\end{align*}
+As a result,
+\begin{align*}
+	&P(A.B) = \frac{4}{11}\\
+	&P(A\mid B) = \frac{4}{5}\\
+	&P(B\mid A) = \frac{2}{3}
+\end{align*}
+\end{document}
