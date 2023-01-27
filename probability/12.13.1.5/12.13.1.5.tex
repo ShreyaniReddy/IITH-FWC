@@ -1,0 +1,71 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsmath}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{gensymb}
+\usepackage{mathtools}
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
+\title{
+Probability Assignment
+}
+\author{GINNA SHREYANI}
+\date{}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+
+
+\begin{document}
+\maketitle
+
+
+\textbf{12.13.1.5}\\
+If $\Pr(A)=\frac{6}{11}$, $\Pr(B)=\frac{5}{11}$ and $\Pr(A+B)=\frac{7}{11}$, find\\
+\begin{enumerate}
+	\item $\Pr(AB)$   
+	\item $\Pr(A \mid B)$  
+	\item $\Pr(B\mid A)$
+\end{enumerate}
+\subsection*{Solution}
+\begin{enumerate}
+	\item We know that,
+\begin{equation}
+	\Pr(AB) = \Pr(A) + \Pr(B) -\Pr(A+B)
+	\label{eq-1}
+\end{equation}
+From $\eqref{eq-1}$, we get\\
+\begin{align}
+	\Pr(AB) &= \frac{6}{11} + \frac{5}{11} - \frac{7}{11}\\
+	\Pr(AB) &= \frac{4}{11}
+\end{align}
+	\item We know that,
+\begin{equation}
+	\Pr(A\mid B) = \frac{\Pr(AB)}{\Pr(B)}
+	\label{eq-2}
+\end{equation}
+From $\eqref{eq-2}$, we get\\
+\begin{align}
+	\Pr(A \mid B) &= \frac{\frac{4}{11}}{\frac{5}{11}}\\
+	\Pr(A\mid B) &= \frac{4}{5}
+\end{align}
+	\item We know that,
+\end{enumerate}
+\begin{equation}
+	\Pr(B\mid A)=\frac{\Pr(BA)}{\Pr(A)}
+	\label{eq-3}
+\end{equation}
+From $\eqref{eq-3}$, we get\\
+\begin{align}
+	\Pr(B\mid A) &= \frac{\frac{4}{11}}{\frac{6}{11}}\\
+	\Pr(B\mid A) &= \frac{4}{6}\\
+	\Pr(B\mid A) &= \frac{2}{3}
+\end{align}
+As a result,
+\begin{align}
+	\Pr(AB) &= \frac{4}{11}\\
+	\Pr(A\mid B) &= \frac{4}{5}\\
+	\Pr(B\mid A) &= \frac{2}{3}
+\end{align}
+\end{document}
